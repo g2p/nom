@@ -28,9 +28,10 @@ include = [
 ]
 
 [features]
-alloc = ["bitvec/alloc", "funty"]
-std = ["alloc", "bitvec/std", "memchr/use_std"]
-default = ["std", "bitvec", "lexical"]
+alloc = ["funty"]
+alloc-bitvec = ["alloc", "bitvec/alloc"]
+std = ["alloc", "memchr/use_std"]
+default = ["std", "alloc-bitvec", "lexical"]
 regexp = ["regex"]
 lexical = ["lexical-core"]
 docsrs = []

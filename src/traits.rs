@@ -1483,7 +1483,7 @@ impl ExtendInto for char {
   }
 }
 
-#[cfg(all(feature = "alloc", feature = "bitvec"))]
+#[cfg(feature = "alloc-bitvec")]
 impl<O, T> ExtendInto for BitSlice<O, T>
 where
   O: BitOrder,
@@ -1503,7 +1503,7 @@ where
   }
 }
 
-#[cfg(all(feature = "alloc", feature = "bitvec"))]
+#[cfg(feature = "alloc-bitvec")]
 impl<'a, O, T> ExtendInto for &'a BitSlice<O, T>
 where
   O: BitOrder,
